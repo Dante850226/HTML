@@ -1,0 +1,239 @@
+*{box-sizing: border-box ;
+    margin: 0;
+    padding: 0;
+
+}
+    html{ 
+        max-height: 100%;
+}
+body{
+    font-family: tahoma;
+    font-size: 8px;
+    background-image: url(../img/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#header{
+    background-color: lightgray;
+    border: 5px solid grey;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area: header; /* NOMBRE PARA CSS GRID */
+}
+#menu{
+    grid-area: nav; /* NOMBRE PARA CSS GRID */
+    background-color: lightgray;
+    border: 5px solid gray;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 6px;
+}
+ul{
+    padding: 0;
+    margin: 0 3px;
+}
+li{
+    display: inline;
+    list-style: none;
+    margin: 0 7px;
+    font: bold 12px verdana;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+#buscarbox input{
+    height: 20px;
+    width: 0px;
+    padding: 0;
+    border: 0px;
+    border-radius: 40px;
+    padding-right: 50px;
+    transition: 0.9s ease;
+}
+#buscarbox input:hover{
+    width: 150px;
+    padding-left: 11px;
+    outline: none;
+}
+#main{
+    grid-area: main; /* NOMBRE PARA CSS GRID */
+    background-color: rgba(255, 253, 253, 0.493);/* efecto glass tranparencia */
+    backdrop-filter: blur(2px);/* efecto glass tranparencia */
+    border: 2px solid yellowgreen;
+    max-width: 10%;
+    height: auto;
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 7px;
+}
+.prorama{
+    display: inline-block;
+    margin: 6px;
+    padding: 6px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 2px solid grey;
+    border-radius: 15px;
+}
+section article{
+    margin: 30px;
+    background-color: rgba(255, 253, 253, 0.493);/* efecto glass tranparencia */
+    backdrop-filter: blur(2px);/* efecto glass tranparencia */
+}
+#sidebar{
+    grid-area: sibebar; /* NOMBRE PARA CSS GRID */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 253, 253, 0.493);/* efecto glass tranparencia */
+    backdrop-filter: blur(2px);/* efecto glass tranparencia */
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+#footer{
+    grid-area: footer;
+    padding-top: 20px;
+    border: 3px solid orange;
+    border: radius 20px;
+    clear: both;
+    background-color: rgba(255, 253, 253, 0.493);/* efecto glass tranparencia */
+    backdrop-filter: blur(2px);/* efecto glass tranparencia */
+}
+#redes a{
+    padding: 6px;
+    margin: 0;
+}
+#redes a i:hover{
+    transform: scale(1.5); /* animacion aumento */
+}
+i[class^="fa"]{  /* color a iconos fontawesome */
+    color: gray;
+    font-size: 25px;
+    border: 2px solid transparent;
+}
+/* seccion css grid diseño web responsive */
+/* vista pc 3 columnas */
+#grid-container > * {
+    text-align: center;
+}
+#grid-container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template: 
+    "header header header" 150px
+    "nav nav nav" 50px
+    "main main sidebar" 300px
+    "main main sidebar" 300px
+    "main main sidebar" 250px
+    "footer footer footer" 150px /
+    1200px 150px 300px;
+}
+/* vista 2 columnas tablet */
+    @media ( max-width:1024px){
+        #grid-container{
+    grid-template: 
+    "header header " 170px
+    "nav main " 800px
+    "nav main " 700px
+    "sidebar sidebar" 650px
+    "footer footer" 100px /
+    250px 450px;
+    font-size: 75%;
+        }
+    }
+    #menu{
+        background-color: blue;
+        border-radius: 22px;
+        display: block;
+        padding: 45px;
+        margin:40px;
+        height: auto;
+        text-align: center;
+    }
+    #main{
+    display: flex;
+    flex-direction: column;/* cambia la forma de direccion de fila a col*/
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;/*se define el auto ajuste de ancho dispostivo pasa a sgte. linea*/
+    max-width:100%;
+       
+    }
+    .programa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black; 
+    
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+#buscarbox{
+    display:block;
+    padding: 5px;
+}
+/* vita cell phone*/
+@media (max-width: 640px){
+    #grid-container{
+        grid-template: 
+        "header" 150px
+        "nav" 50px
+        "main" 1120px
+        "sidebar" 800px
+        "footer" 100px /
+        500px; 
+        font-size: 60%;
+        }
+        #menu{
+            display: none;
+        } 
+       
+        
+        
+        #main{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items:center;
+            flex-wrap: wrap;
+            max-width: 100%;
+            height: auto;
+          }
+     .programa{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid black; 
+        }
+     iframe{
+        max-width: 100%;
+        height: auto;
+    }
+    #buscarbox{
+        display:none;
+    }
+}
