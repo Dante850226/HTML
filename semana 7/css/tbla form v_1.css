@@ -1,0 +1,30 @@
+body{
+    background: radial-gradient( white, blue);
+    background-repeat: no repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body h1{
+    font-family: Tahoma;
+    text-align: center;
+    color: black;
+}
+form table{
+    width: 60%;
+    margin: 3px auto;
+}
+form table caption{
+    font-size: 26px;
+    color: aqua;
+    padding: 25px;
+}
+form table th, td{
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 3px solid blueviolet;
+    padding: 4opx;
+}
+input{
+    background-color: lavender;
+}
