@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PASAJE TM </title>
+    <!-- LINK SITIO MENSAJES ELEGANTES  -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/TRANSMILENIO.jpeg"  alt="" width="150px" height="150px">
+        <h2> Ingreso / saldo tarjeta transmilenio </h2>
+        <br>
+        <script>
+            let saldo;
+            const TM=2950; // valor pasaje 
+            // entrada saldo
+            saldo=parseInt(prompt("Ingrese saldo de tarjeta TM"));
+            //  ** proceso **
+            if(saldo>=TM){
+                swal("Estimado usuario","Ingrese al sistema Transmilenio","success");
+            }else{
+                swal("Estimado usuario","Saldo Insuficiente","error");
+            }
+        </script>
+    </center>
+</body>
+</html>
