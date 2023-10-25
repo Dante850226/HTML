@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> INICIO DE SESION </title>
+    <!-- LINK WEB ERROR  -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./img/incap.png" alt="" width="150" height="150">
+        <h1> CICLO FOR - IF </h1>
+            <h2> validacion de ingreso usuario </h2>
+            <br>
+            <script>
+                // ENTRADA PROCESO DE VALIDACION DE CONTRASEÑA  
+                var pasw2; // contraseña usuario
+                var sw=0; // variable swicth estado apagada
+                var clave=123; // contraseña oficial acceso
+                // CICLO FOR 
+                for(f=1;f<=3;f++){
+                    pasw2=parseInt(prompt("ingrese contraseña para iniciar"));
+                    if(pasw2==clave){
+                        swal("Apreciado usuario","acceso otorgado","success");
+                    sw=1; // var swicht cambio de estado encendido 
+                    break;  // salir del ciclo
+                }
+            }
+            //
+            if(sw==0){
+                swal("apreciado usuario","acceso bloqueado","error");
+                document.write("blocked access");
+            }else{
+                document.write("granted access");
+            }
+            </script>
+    </center>
+</body>
+</html>
